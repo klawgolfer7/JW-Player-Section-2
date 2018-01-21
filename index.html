@@ -22,7 +22,9 @@ playerInstance.setup({
       tag: "https://playertest.longtailvideo.com/vast-30s-ad.xml"
     }
 });
-playerInstance.on('cuepoint', playAd())
+playerInstance.on('cuepoint', function(){
+	playerInstance.playAd('https://playertest.longtailvideo.com/vast-30s-ad.xml')
+});
 
 </script>
 
