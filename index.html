@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <script src="https://content.jwplatform.com/libraries/O8RyQor0.js"></script>
+
+</head>
+<body>
+
+<div id="myElement"></div>
+<br>
+<img src="http://bob.jwplayer.com/~test/assets/HardImage1.jpg" alt="" id="image">
+<script type="text/javaScript">
+var playerInstance = jwplayer("myElement");
+playerInstance.setup({
+    file: "http://bob.jwplayer.com/~test/assets/MediumVideo.mp4",
+    mediaid: "tEUc3iy2",
+    image: "http://bob.jwplayer.com/~test/assets/MediumImage.jpg"
+});
+var fiveSecondEvtFired = false;
+playerInstance.on('time',function(event){
+	if (Math.floor(event.position)==5 && !fiveSecondEvtFired){
+		fiveSecondEvtFired = true;
+		playerInstance.pause();
+		document.getElementById("image").src="http://bob.jwplayer.com/~test/assets/HardImage2.jpg";
+	}
+			
+})
+	
+
+</script>
+
+
+</body>
+</html>
