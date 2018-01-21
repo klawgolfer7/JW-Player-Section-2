@@ -14,13 +14,13 @@
 <script type="text/javaScript">
 var playerInstance = jwplayer("myElement");
 playerInstance.setup({
-    file: "http://bob.jwplayer.com/~test/assets/MediumVideo.mp4",
-    mediaid: "tEUc3iy2",
-    image: "http://bob.jwplayer.com/~test/assets/MediumImage.jpg"
+    file: "http://content.jwplatform.com/videos/d305hoQg-fsiDRyv0.mp4",
+    mediaid: "d305hoQg",
+    image: "http://content.jwplatform.com/thumbs/d305hoQg-480.jpg"
 });
 var fiveSecondEvtFired = false;
 playerInstance.on('time',function(event){
-	if (Math.floor(event.position)==5 && !fiveSecondEvtFired){
+	if (Math.floor(event.position)==10 && !fiveSecondEvtFired){
 		fiveSecondEvtFired = true;
 		playerInstance.pause();
 		document.getElementById("image").src="http://bob.jwplayer.com/~test/assets/HardImage2.jpg";
