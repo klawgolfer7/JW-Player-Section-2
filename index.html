@@ -10,7 +10,7 @@
 
 <div id="myElement"></div>
 <br>
-<img src="http://bob.jwplayer.com/~test/assets/HardImage1.jpg" alt="" id="image">
+
 <script type="text/javaScript">
 var playerInstance = jwplayer("myElement");
 playerInstance.setup({
@@ -20,7 +20,7 @@ playerInstance.setup({
 });
 var fiveSecondEvtFired = false;
 playerInstance.on('time',function(event){
-	if (Math.floor(event.position)==10 && !fiveSecondEvtFired){
+	if (Math.floor(event.position)==5 && !fiveSecondEvtFired){
 		fiveSecondEvtFired = true;
 		playerInstance.pause();
 		document.getElementById("image").src="http://bob.jwplayer.com/~test/assets/HardImage2.jpg";
