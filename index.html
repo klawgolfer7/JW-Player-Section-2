@@ -15,7 +15,12 @@ var playerInstance = jwplayer("myElement");
 playerInstance.setup({
     file: "http://content.jwplatform.com/videos/d305hoQg-fsiDRyv0.mp4",
     mediaid: "d305hoQg",
-    image: "http://content.jwplatform.com/thumbs/d305hoQg-480.jpg"
+    autostart: "viewable",
+    image: "http://content.jwplatform.com/thumbs/d305hoQg-480.jpg",
+    advertising: {
+      client: "vast",
+      tag: "https://playertest.longtailvideo.com/vast-30s-ad.xml"
+    }
 });
 
 	
