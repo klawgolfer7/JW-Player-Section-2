@@ -33,12 +33,13 @@ playerInstance.setup({
 });
 console.log(playerInstance.getPlaylist());
 playerInstance.on('meta', function(e) {
-    if (e.metadata) {
-        var cuepoint = e.metadata.cuepoint;
+    console.log(e);
+//     if (e.metadata) {
+//         var cuepoint = e.metadata.cuepoint;
 
-cuepoint ? cuepointDiv.innerHTML = cuepoint : cuepointDiv.innerHTML = 'Unknown';
+// cuepoint ? cuepointDiv.innerHTML = cuepoint : cuepointDiv.innerHTML = 'Unknown';
 
-    }
+//     }
 })
 // playerInstance.on('ready', function() {
 // 			console.log(playerInstance.getItemMeta())
