@@ -32,10 +32,11 @@ playerInstance.setup({
     }
 });
 var object = playerInstance.getPlaylist();
+    console.log(playerInstance.getPlaylistItem(0);
 
-console.log(object)
+// console.log(object)
 
-jwplayer().on('meta', function(e) {
+playerInstance.on('meta', function(e) {
     console.log(e.metadata); 
     console.log(metadata);
 //     if (e.metadata) {
