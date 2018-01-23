@@ -23,7 +23,7 @@ playerInstance.setup({
     // }
 });
 console.log(playerInstance.getPlaylist());
-playerInstance.on('viewable', function(e) {
+playerInstance.on(viewable, function(e) {
 	if (viewable == 1) {
 			console.log(metadata);
 	}
