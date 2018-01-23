@@ -23,7 +23,9 @@ playerInstance.setup({
     // }
 });
 console.log(playerInstance.getPlaylist());
-playerInstance.on('meta', console.log(metadata));
+playerInstance.on('meta', function(e) {
+	console.log(e.meta);
+});
 // playerInstance.on('meta', function(e) {
 // 	if (e.metadata) {
 // 		var cuepoint = e.metadata.cuepoint;
