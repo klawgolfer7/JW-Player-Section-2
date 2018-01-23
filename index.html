@@ -33,17 +33,15 @@ playerInstance.setup({
 });
 console.log(playerInstance.getPlaylist());
 playerInstance.on('meta', function(e) {
-    console.log(e.metadata);
+    console.log(e.metadata); 
+    console.log(metadata);
 //     if (e.metadata) {
-//         var cuepoint = e.metadata.cuepoint;
+//         var cuepoint = e.metadata.cuepoint;  IF THIS WAS WORKING I WOULD THEN USE onTime(cuepoint, playAd(ad.xml))
 
 // cuepoint ? cuepointDiv.innerHTML = cuepoint : cuepointDiv.innerHTML = 'Unknown';
 
 //     }
 });
-// playerInstance.on('ready', function() {
-// 			console.log(playerInstance.getItemMeta())
-// });
 // playerInstance.on('meta', function(e) {
 // 	if (e.metadata) {
 // 		var cuepoint = e.metadata.cuepoint;
