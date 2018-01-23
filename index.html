@@ -31,7 +31,7 @@ playerInstance.setup({
     	}
     }
 });
-console.log(playerInstance.getPlaylist(file));
+console.log(playerInstance.getPlaylist('file'));
 jwplayer().on('meta', function(e) {
     console.log(e.metadata); 
     console.log(metadata);
