@@ -9,9 +9,12 @@
 <body>
 
 <div id="myElement"></div>
+<div id="cuepoint"></div>
 <br>
 <script>
 var playerInstance = jwplayer("myElement");
+var cuepointDiv = document.getElementById("cuepoint");
+
 playerInstance.setup({
     file: "https://content.jwplatform.com/manifests/d305hoQg.m3u8",
     mediaid: "d305hoQg",
@@ -28,7 +31,14 @@ playerInstance.setup({
     }
 });
 console.log(playerInstance.getPlaylist());
-console.log(playerInstance.on('meta'))
+playerInstance.on('meta', function(e) {
+    if (e.metadata) {
+        var cuepoint = e.metadata.cuepoint;
+
+cuepoint ? cuepointDiv.innerHTML = cuepoint : cuepointDiv.innerHTML = 'Unknown';
+
+    }
+})
 // playerInstance.on('ready', function() {
 // 			console.log(playerInstance.getItemMeta())
 // });
