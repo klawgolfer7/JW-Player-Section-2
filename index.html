@@ -19,10 +19,17 @@ playerInstance.setup({
     image: "http://content.jwplatform.com/thumbs/d305hoQg-480.jpg",
     // advertising: {
     // 	client: "vast",
-    // 	tag: "https://playertest.longtailvideo.com/vast-30s-ad.xml?cb__item-cuepoint__"
+    // 	tag: "https://playertest.longtailvideo.com/vast-30s-ad.xml"
     // }
 });
-console.log(playerInstance.getPlaylist());
+playerInstance.on('meta', function(e) {
+	if (e.metadata) {
+		var cuepoint = e.metadata.cuepoint;
+		console.log(cuepoint);
+		playerInstance.on('cuepoint', playAd("https://playertest.longtailvideo.com/vast-30s-ad.xml"))
+	}
+})
+
 
 
 </script>
