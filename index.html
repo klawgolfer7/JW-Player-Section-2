@@ -16,6 +16,10 @@
 var playerInstance = jwplayer("myElement");
 var cuepointDiv = document.getElementById("cuepoint");
 
+playerInstance.on('meta', function(e) {
+    console.log(e.metadata); 
+    console.log(metadata);
+
 playerInstance.setup({
     file: "https://content.jwplatform.com/manifests/d305hoQg.m3u8",
     mediaid: "d305hoQg",
@@ -35,12 +39,12 @@ var object = playerInstance.getPlaylist();
     console.log(playerInstance.getPlaylistItem(0));
     var object2 = playerInstance.getPlaylistItem(0);
     console.log(object2.file);
+    var vidFile - object2.file;
+
 
 // console.log(object)
 
-playerInstance.on('meta', function(e) {
-    console.log(e.metadata); 
-    console.log(metadata);
+
 //     if (e.metadata) {
 //         var cuepoint = e.metadata.cuepoint;  IF THIS WAS WORKING I WOULD THEN USE onTime(cuepoint, playAd(ad.xml))
 
