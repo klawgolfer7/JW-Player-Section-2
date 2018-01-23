@@ -10,11 +10,10 @@
 
 <div id="myElement"></div>
 <br>
-<div id="cuepoint">TEST</div>
 <br>
 <script>
 var playerInstance = jwplayer("myElement");
-var cuepointDiv = document.getElementById("cuepoint");
+// var cuepointDiv = document.getElementById("cuepoint");
 
 playerInstance.setup({
     file: "https://content.jwplatform.com/manifests/d305hoQg.m3u8",
@@ -42,13 +41,9 @@ var object = playerInstance.getPlaylist();
 
 playerInstance.on('meta', function(e) {
     console.log(e.metadata); 
-    console.log(metadata);
 //     if (e.metadata) {
 //         var cuepoint = e.metadata.cuepoint;  IF THIS WAS WORKING I WOULD THEN USE onTime(cuepoint, playAd(ad.xml))
-
-// cuepoint ? cuepointDiv.innerHTML = cuepoint : cuepointDiv.innerHTML = 'Unknown';
-
-//     }
+//  }
 });
 // playerInstance.on('meta', function(e) {
 // 	if (e.metadata) {
