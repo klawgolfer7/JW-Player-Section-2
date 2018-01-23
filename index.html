@@ -10,7 +10,7 @@
 
 <div id="myElement"></div>
 <br>
-<script type="text/javaScript">
+<script>
 var playerInstance = jwplayer("myElement");
 playerInstance.setup({
     file: "http://content.jwplatform.com/videos/d305hoQg-fsiDRyv0.mp4",
@@ -23,8 +23,11 @@ playerInstance.setup({
     // }
 });
 console.log(playerInstance.getPlaylist());
-playerInstance.on('meta', function(e) {
-	console.log(e.metadata);
+playerInstance.on('viewable', function(e) {
+	if (viewable == 1) {
+			console.log(metadata);
+	}
+
 });
 // playerInstance.on('meta', function(e) {
 // 	if (e.metadata) {
