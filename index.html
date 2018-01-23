@@ -25,10 +25,10 @@ playerInstance.setup({
 playerInstance.on('meta', function(e) {
 	if (e.metadata) {
 		var cuepoint = e.metadata.cuepoint;
+	}
+});
 		console.log(cuepoint);
 		playerInstance.on('cuepoint', playAd("https://playertest.longtailvideo.com/vast-30s-ad.xml"))
-	}
-})
 
 
 
