@@ -22,14 +22,15 @@ playerInstance.setup({
     // 	tag: "https://playertest.longtailvideo.com/vast-30s-ad.xml"
     // }
 });
-console.log(playerInstance.on('meta'))
-playerInstance.on('meta', function(e) {
-	if (e.metadata) {
-		var cuepoint = e.metadata.cuepoint;
-	}
-});
-		console.log(cuepoint);
-		playerInstance.on('cuepoint', playAd("https://playertest.longtailvideo.com/vast-30s-ad.xml"))
+console.log(playerInstance.getPlaylist())
+// console.log(playerInstance.on('meta'))
+// playerInstance.on('meta', function(e) {
+// 	if (e.metadata) {
+// 		var cuepoint = e.metadata.cuepoint;
+// 	}
+// });
+// 		console.log(cuepoint);
+// 		playerInstance.on('cuepoint', playAd("https://playertest.longtailvideo.com/vast-30s-ad.xml"))
 
 
 
