@@ -33,7 +33,7 @@ playerInstance.setup({
 });
 console.log(playerInstance.getPlaylist());
 playerInstance.on('meta', function(e) {
-    console.log(e);
+    console.log(e.metadata);
 //     if (e.metadata) {
 //         var cuepoint = e.metadata.cuepoint;
 
