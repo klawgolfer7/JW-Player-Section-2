@@ -13,7 +13,8 @@
 <script>
 var playerInstance = jwplayer("myElement");
 playerInstance.setup({
-    playlist: "http://content.jwplatform.com/videos/d305hoQg-fsiDRyv0.mp4",
+    playlist: "http://content.jwplatform.com/videos/d305hoQg.mp4",
+    mediaid: "d305hoQg",
     autostart: "viewable",
     image: "http://content.jwplatform.com/thumbs/d305hoQg-480.jpg",
     advertising: {
@@ -26,10 +27,10 @@ playerInstance.setup({
     	}
     }
 });
-console.log(playerInstance.getPlaylist());
-playerInstance.on('ready', function() {
-			console.log(playerInstance.getItemMeta())
-});
+// console.log(playerInstance.getPlaylist());
+// playerInstance.on('ready', function() {
+// 			console.log(playerInstance.getItemMeta())
+// });
 // playerInstance.on('meta', function(e) {
 // 	if (e.metadata) {
 // 		var cuepoint = e.metadata.cuepoint;
