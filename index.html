@@ -35,10 +35,8 @@ playerInstance.setup({
 });
 
 var object = playerInstance.getPlaylist();
-    // console.log(object);
-    // console.log(playerInstance.getPlaylistItem(0).file);
-    // console.log(playerInstance.getPlaylistItem(0));
-    playerInstance.getPlaylist().on('meta', function(e) {
+    console.log(object);
+    playerInstance.on('meta', function(e) {
       console.log(e.metadata);
     });
 
@@ -49,17 +47,18 @@ var object = playerInstance.getPlaylist();
 //         console.log(m);
 //         console.log(metadata);
 //         console.log(e.metadata);
-
 // });
 
 
-
-//     if (e.metadata) {
-//         var cuepoint = e.metadata.cuepoint;  IF THIS WAS WORKING I WOULD THEN USE   playerInstance.on('time', function(e) {
-//   if (e.position == cuepoint)
-//     playAd(https://playertest.longtailvideo.com/vast-30s-ad.xml)
-//  });
-//  }
+// FUNCTIONS TO USE IF METADATA EXTRACTION WAS WORKING
+// playerInstance.on('meta', function(e) {
+//    var cuepoint = e.metadata.cuepoint;
+//    if (e.metadata) {
+//         playerInstance.on('time', function(e) {
+//           if (e.position == cuepoint) {
+//             playerInstance.playAd("https://playertest.longtailvideo.com/vast-30s-ad.xml");
+//           }
+// });
 
 // playerInstance.on('meta', function(e) {
 //  if (e.metadata) {
