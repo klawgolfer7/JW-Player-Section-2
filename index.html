@@ -31,7 +31,7 @@ playerInstance.setup({
     }
 });
 var object = playerInstance.getPlaylist();
-    console.log(playerInstance.getPlaylistItem(0));
+    console.log(playerInstance.getPlaylistItem(0).file);
     var object2 = playerInstance.getPlaylistItem(0);
     console.log(object2.file);
     var vidFile = object2.file;
@@ -40,9 +40,12 @@ var object = playerInstance.getPlaylist();
 // console.log(object)
 
 playerInstance.on('meta', function(e) {
+    var metadata = metadata;
     console.log(e.metadata) 
 //     if (e.metadata) {
-//         var cuepoint = e.metadata.cuepoint;  IF THIS WAS WORKING I WOULD THEN USE onTime(cuepoint, playAd(ad.xml))
+//         var cuepoint = e.metadata.cuepoint;  IF THIS WAS WORKING I WOULD THEN USE   playerInstance.on('time', function(cuepoint) {
+//     playAd(https://playertest.longtailvideo.com/vast-30s-ad.xml)
+//  });
 //  }
 });
 // playerInstance.on('meta', function(e) {
