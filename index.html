@@ -39,12 +39,15 @@ playerInstance.setup({
 
 
 
-    jwplayer().on('meta', function(e) {
+    playerInstance.on('meta', function(e) {
         var m = e.cuepoint;
         console.log(m);
         console.log(metadata);
 
 });
+
+    var metaData = playerInstance.getMeta();
+    console.log(metaData);
 
 
 //     if (e.metadata) {
