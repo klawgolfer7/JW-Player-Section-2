@@ -30,14 +30,14 @@ playerInstance.setup({
     	}
     }
 });
-var object = playerInstance.getPlaylist();
-    console.log(playerInstance.getPlaylistItem(0).file);
-    console.log(playerInstance.getPlaylistItem(0));
-    var object2 = playerInstance.getPlaylistItem(0).file;
+// var object = playerInstance.getPlaylist();
+//     console.log(playerInstance.getPlaylistItem(0).file);
+//     console.log(playerInstance.getPlaylistItem(0));
+//     var object2 = playerInstance.getPlaylistItem(0).file;
 
 
 playerInstance.on('meta', function(e) {
-        console.log(e.metadata);
+        console.log(playerInstance.metadata);
         console.log(metadata);
 
 });
