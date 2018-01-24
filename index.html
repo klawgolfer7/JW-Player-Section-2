@@ -10,6 +10,7 @@
 
 <div id="myElement"></div>
 
+</body>
 <script>
 var playerInstance = jwplayer("myElement");
 playerInstance.setup({
@@ -23,13 +24,13 @@ playerInstance.setup({
     // },
     autostart: "viewable",   
     advertising: {
-    	client: "vast",
-    	schedule: {
-    		tenSecondRoll: {
-    			tag: "https://playertest.longtailvideo.com/vast-30s-ad.xml",
-    			offset: 10
-    		}
-    	}
+      client: "vast",
+      schedule: {
+        tenSecondRoll: {
+          tag: "https://playertest.longtailvideo.com/vast-30s-ad.xml",
+          offset: 10
+        }
+      }
     }
 });
 // var object = playerInstance.getPlaylist();
@@ -57,17 +58,14 @@ playerInstance.setup({
 //  }
 
 // playerInstance.on('meta', function(e) {
-// 	if (e.metadata) {
-// 		var cuepoint = e.metadata.cuepoint;
-// 	}
+//  if (e.metadata) {
+//    var cuepoint = e.metadata.cuepoint;
+//  }
 // });
-// 		console.log(cuepoint);
-// 		playerInstance.on('cuepoint', playAd("https://playertest.longtailvideo.com/vast-30s-ad.xml"))
+//    console.log(cuepoint);
+//    playerInstance.on('cuepoint', playAd("https://playertest.longtailvideo.com/vast-30s-ad.xml"))
 
 
 
 </script>
-
-
-</body>
 </html>
