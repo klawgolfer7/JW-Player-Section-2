@@ -38,7 +38,7 @@ var object = playerInstance.getPlaylist();
     // console.log(object);
     // console.log(playerInstance.getPlaylistItem(0).file);
     // console.log(playerInstance.getPlaylistItem(0));
-    object.on('meta', function(e) {
+    playerInstance.getPlaylist().on('meta', function(e) {
       console.log(e.metadata);
     });
 
