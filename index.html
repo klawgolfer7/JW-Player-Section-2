@@ -37,8 +37,8 @@ playerInstance.setup({
 
 
 playerInstance.on('ready', function(e) {
-  if (viewable === 1) {
-    playerInstance.on("meta", function(event) {
+  if ('viewable' === 1) {
+    playerInstance.on('meta', function(event) {
         console.log(event.metadata);
         console.log(metadata);
     });
