@@ -36,9 +36,14 @@ playerInstance.setup({
 //     var object2 = playerInstance.getPlaylistItem(0).file;
 
 
-playerInstance.on('meta', function(e) {
-        console.log(e.metadata);
+playerInstance.on('ready', function(e) {
+  if (viewable === 1) {
+    playerInstance.on("meta" function(event) {
+        console.log(event.metadata);
         console.log(metadata);
+    }
+  }
+
 
 });
 
