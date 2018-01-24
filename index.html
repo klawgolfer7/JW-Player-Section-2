@@ -39,8 +39,8 @@ playerInstance.setup({
 
 
 
-    playerInstance.on('meta', function() {
-        var m = e.metadata;
+    playerInstance.on('meta', function(e) {
+        var m = e.cuepoint;
         console.log(m);
         console.log(metadata);
 
