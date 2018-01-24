@@ -39,8 +39,8 @@ playerInstance.setup({
 
 
 
-    playerInstance.on('meta', function(event) {
-        var m = event.metadata;
+    jwplayer.on('meta', function() {
+        var m = e.metadata;
         console.log(m);
         console.log(metadata);
 
