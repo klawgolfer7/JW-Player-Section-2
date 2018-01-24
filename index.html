@@ -19,6 +19,7 @@ playerInstance.setup({
         file: "https://content.jwplatform.com/manifests/d305hoQg.m3u8",
         mediaid: "d305hoQg",
         autostart: "viewable",
+        preload: "metadata",
         image: "http://content.jwplatform.com/thumbs/d305hoQg-480.jpg"
     }   
     // advertising: {
@@ -36,13 +37,19 @@ playerInstance.setup({
 });
 var object = playerInstance.getPlaylist();
     console.log(playerInstance.getPlaylistItem(0).file);
+    console.log(playerInstance.getPlaylistItem(0));
     var object2 = playerInstance.getPlaylistItem(0).file;
 
 
 playerInstance.on('meta', function(e) {
-    console.log(e.metadata);
-    console.log(metadata);
-    });
+    if (e.metadata) {
+        console.log(e.metadata);
+        console.log(metadata);
+    }
+
+});
+
+
 //     if (e.metadata) {
 //         var cuepoint = e.metadata.cuepoint;  IF THIS WAS WORKING I WOULD THEN USE   playerInstance.on('time', function(cuepoint) {
 //     playAd(https://playertest.longtailvideo.com/vast-30s-ad.xml)
