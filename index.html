@@ -30,7 +30,8 @@ playerInstance.setup({
 
 playerInstance.onPlaylist(function(e){console.log({cuepoint: e.playlist[0].cuepoint})})
 
-var cuePoint = playerInstance.onPlaylist(function(e){e.playlist[0].cuepoint})
+var cuePoint = playerInstance.onPlaylist(function(e){e.playlist[0].cuepoint});
+console.log(cuePoint);
 
 playerInstance.on('time', function(e) {
   if (e.position == cuePoint) {
