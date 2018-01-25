@@ -44,7 +44,7 @@ playerInstance.onPlaylist(function(e) {
     console.log(cuePoint);
     if (cuePoint) {
       playerInstance.on('time', function(e) {
-        tenSec = e.position
+        tenSec = e.position[10];
         if (tenSex == cuePoint) {
           console.log("It works!")
           playerInstance.playAd("https://playertest.longtailvideo.com/vast-30s-ad.xml");
