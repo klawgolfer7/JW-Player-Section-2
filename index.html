@@ -32,8 +32,12 @@ var object = playerInstance.getPlaylist();
     console.log(object);
     playerInstance.on('meta', function(e) {
       console.log(e);
-      console.log(object);
     });
+
+    var cuepoint = playerInstance.getPlaylistIndex(0);
+    console.log(cuepoint);
+
+
 
 
 
