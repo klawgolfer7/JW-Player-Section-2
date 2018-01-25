@@ -43,7 +43,8 @@ playerInstance.onPlaylist(function(e) {
     cuePoint = e.playlist[0].cuepoint;
     console.log(cuePoint);
     if (cuePoint) {
-      playerInstance.onTime(function(e) {
+      playerInstance.on('time', function(e) {
+        console.log(e.position);
         if (e.position == cuePoint) {
           playerInstance.playAd("https://playertest.longtailvideo.com/vast-30s-ad.xml");
         }
