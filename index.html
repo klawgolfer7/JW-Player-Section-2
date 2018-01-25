@@ -15,7 +15,6 @@
 var playerInstance = jwplayer("myElement");
 playerInstance.setup({
     playlist: 'https://cdn.jwplayer.com/v2/media/iSayM6GK',
-    cuepoint: 10,
     preload: 'metadata',
     autostart: "viewable",   
     advertising: {
@@ -33,6 +32,7 @@ var object = playerInstance.getPlaylist();
     console.log(object);
     playerInstance.on('meta', function(e) {
       console.log(e);
+      console.log(object);
     });
 
 
