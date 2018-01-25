@@ -28,14 +28,14 @@ playerInstance.setup({
     }
 });
 
-var object = playerInstance.getPlaylist();
-    console.log(object);
-    playerInstance.on('meta', function(e) {
-      console.log(e);
-    });
+playerInstance.onPlaylist(function(e){console.log({cuepoint: e.playlist[0].cuepoint})})
 
-    var cuepoint = playerInstance.getPlaylistItem().cuepoint;
-    console.log(cuepoint);
+// var object = playerInstance.getPlaylist();
+//     console.log(object);
+//     playerInstance.on('meta', function(e) {
+//       console.log(e);
+//     });
+
 
 
 
