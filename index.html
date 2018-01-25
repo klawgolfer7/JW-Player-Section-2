@@ -28,9 +28,15 @@ playerInstance.setup({
     // }
 });
 
-playerInstance.onPlaylist(function(e){console.log(e.playlist[0].cuepoint)})
+playerInstance.onPlaylist(function(e){console.log(e.playlist[0].cuepoint)});
 
-
+playerInstance.onPlaylist(function(e) {
+  if (e.playlist[0].cuepoint == 10) {
+    console.log(e.playlist[0].cuepoint);
+    playerInstance.playAd("https://playertest.longtailvideo.com/vast-30s-ad.xml");
+  }
+  
+});
 
 // playerInstance.on('time', function(e) {
 //   if (e.position == cuePoint) {
