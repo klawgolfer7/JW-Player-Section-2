@@ -32,12 +32,14 @@ playerInstance.onPlaylist(function(e){console.log(e.playlist[0].cuepoint)});
 
 playerInstance.onPlaylist(function(e) {
   var cuePoint = e.playlist[0].cuepoint;
-  playerInstance.on('time', function(e) {
+  
+});
+
+playerInstance.on('time', function(e) {
     if (e.position == cuePoint) {
       playerInstance.playAd("https://playertest.longtailvideo.com/vast-30s-ad.xml");
     }
   })
-});
 
 // playerInstance.on('time', function(e) {
 //   if (e.position == cuePoint) {
