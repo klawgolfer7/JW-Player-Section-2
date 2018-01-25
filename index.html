@@ -17,18 +17,27 @@ playerInstance.setup({
     playlist: 'https://cdn.jwplayer.com/v2/media/iSayM6GK',
     preload: 'metadata',
     autostart: "viewable",   
-    advertising: {
-      client: "vast",
-      schedule: {
-        tenSecondRoll: {
-          tag: "https://playertest.longtailvideo.com/vast-30s-ad.xml",
-          offset: 10
-        }
-      }
-    }
+    // advertising: {
+    //   client: "vast",
+    //   schedule: {
+    //     tenSecondRoll: {
+    //       tag: "https://playertest.longtailvideo.com/vast-30s-ad.xml",
+    //       offset: 10
+    //     }
+    //   }
+    // }
 });
 
 playerInstance.onPlaylist(function(e){console.log({cuepoint: e.playlist[0].cuepoint})})
+
+var cuePoint = playerInstance.onPlaylist(function(e){e.playlist[0].cuepoint})
+
+playerInstance.on('time', function(e) {
+  if (e.position == cuePoint) {
+    playerInstance.playAd("https://playertest.longtailvideo.com/vast-30s-ad.xml");
+  }
+
+
 
 // var object = playerInstance.getPlaylist();
 //     console.log(object);
@@ -36,17 +45,6 @@ playerInstance.onPlaylist(function(e){console.log({cuepoint: e.playlist[0].cuepo
 //       console.log(e);
 //     });
 
-
-
-
-
-
-//     playerInstance.on('meta', function(e) {
-//         var m = e.metadata.cuepoint;
-//         console.log(m);
-//         console.log(metadata);
-//         console.log(e.metadata);
-// });
 
 
 // FUNCTIONS TO USE IF METADATA EXTRACTION WAS WORKING
