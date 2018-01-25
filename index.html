@@ -14,7 +14,10 @@
 <script>
 var playerInstance = jwplayer("myElement");
 playerInstance.setup({
-    playlist: 'https://cdn.jwplayer.com/v2/media/iSayM6GK', 
+    playlist: {
+      file: 'https://cdn.jwplayer.com/v2/media/iSayM6GK', 
+      prelaod: 'metadata',
+    }
     // {
     //     file: "https://content.jwplatform.com/manifests/d305hoQg.m3u8",
     //     mediaid: "d305hoQg",
@@ -37,7 +40,7 @@ playerInstance.setup({
 var object = playerInstance.getPlaylist();
     console.log(object);
     playerInstance.on('meta', function(e) {
-      console.log(e.cuepoint);
+      console.log(e);
     });
 
 
