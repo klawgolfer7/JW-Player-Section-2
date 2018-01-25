@@ -15,7 +15,9 @@
 var playerInstance = jwplayer("myElement");
 playerInstance.setup({
     playlist: {
-      file: 'https://cdn.jwplayer.com/v2/media/iSayM6GK', 
+      sources: {
+        file: 'https://cdn.jwplayer.com/v2/media/iSayM6GK', 
+      }
       preload: 'metadata',
     },
     // {
