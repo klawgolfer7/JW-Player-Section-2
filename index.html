@@ -44,7 +44,7 @@ playerInstance.onPlaylist(function(e) {
     console.log(cuePoint);
     if (cuePoint) {
       playerInstance.on('time', function(e) {
-        tenSec = e.duration[];
+        tenSec = e.duration;
         console.log(tenSec);
         if (tenSec == cuePoint) {
           console.log("It works!")
