@@ -28,9 +28,8 @@ playerInstance.setup({
     // }
 });
 
-playerInstance.onPlaylist(function(e){console.log({cuepoint: e.playlist[0].cuepoint})})
+playerInstance.onPlaylist(function(e){console.log(e.playlist[0].cuepoint)})
 
-console.log(playerInstance.onPlaylist(function(e){e.playlist[0].cuepoint}));
 
 
 // playerInstance.on('time', function(e) {
