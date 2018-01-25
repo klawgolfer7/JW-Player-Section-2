@@ -44,8 +44,8 @@ playerInstance.onPlaylist(function(e) {
     console.log(cuePoint);
     if (cuePoint) {
       playerInstance.on('time', function(e) {
-        console.log(e.position);
         if (e.position == cuePoint) {
+          console.log("It works!")
           playerInstance.playAd("https://playertest.longtailvideo.com/vast-30s-ad.xml");
         }
       });
