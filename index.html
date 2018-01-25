@@ -28,18 +28,26 @@ playerInstance.setup({
     // }
 });
 
+// playerInstance.on('time', function(e) {
+//   console.log()
+//     if (e.position == cuePoint) {
+//       playerInstance.playAd("https://playertest.longtailvideo.com/vast-30s-ad.xml");
+//     }
+//   })
+
+// function 
+
 playerInstance.onPlaylist(function(e){console.log(e.playlist[0].cuepoint)});
 
 playerInstance.onPlaylist(function(e) {
-  const cuePoint = e.playlist[0].cuepoint;
+    cuePoint = e.playlist[0].cuepoint;
+    console.log(cuePoint);
+    if (cuePoint == 10)
+    return e.playlist[0].cuepoint;
   
 });
 
-playerInstance.on('time', function(e) {
-    if (e.position == cuePoint) {
-      playerInstance.playAd("https://playertest.longtailvideo.com/vast-30s-ad.xml");
-    }
-  })
+
 
 // playerInstance.on('time', function(e) {
 //   if (e.position == cuePoint) {
