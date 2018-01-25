@@ -28,6 +28,23 @@ playerInstance.setup({
     // }
 });
 
+played = false; 
+playerInstance.on('time', function(e) {
+   if (e.position >= playerInstance.getPlaylistItem().cuepoint && !played) {
+      handlePlayingAd();
+      played = true;
+   }
+})
+
+function handlePlayingAd() {
+      playerInstance.pause();
+      playerInstance.playAd('https://playertest.longtailvideo.com/vast-30s-ad.xml');
+}
+
+playerInstance.on('adComplete', function(e) {
+    playerInstance.play();
+})
+
 // playerInstance.on('time', function(e) {
 //   console.log()
 //     if (e.position == cuePoint) {
@@ -37,23 +54,23 @@ playerInstance.setup({
 
 // function 
 
-playerInstance.onPlaylist(function(e){console.log(e.playlist[0].cuepoint)});
+// playerInstance.onPlaylist(function(e){console.log(e.playlist[0].cuepoint)});
 
-playerInstance.onPlaylist(function(e) {
-    cuePoint = e.playlist[0].cuepoint;
-    console.log(cuePoint);
-    if (cuePoint) {
-      playerInstance.on('time', function(e) {
-        tenSec = e.duration;
-        console.log(tenSec);
-        if (tenSec == cuePoint) {
-          console.log("It works!")
-          playerInstance.playAd("https://playertest.longtailvideo.com/vast-30s-ad.xml");
-        }
-      });
-    }
+// playerInstance.onPlaylist(function(e) {
+//     cuePoint = e.playlist[0].cuepoint;
+//     console.log(cuePoint);
+//     if (cuePoint) {
+//       playerInstance.on('time', function(e) {
+//         tenSec = e.duration;
+//         console.log(tenSec);
+//         if (tenSec == cuePoint) {
+//           console.log("It works!")
+//           playerInstance.playAd("https://playertest.longtailvideo.com/vast-30s-ad.xml");
+//         }
+//       });
+//     }
   
-});
+// });
 
 
 
