@@ -16,16 +16,7 @@ var playerInstance = jwplayer("myElement");
 playerInstance.setup({
     playlist: 'https://cdn.jwplayer.com/v2/media/iSayM6GK',
     preload: 'metadata',
-    autostart: "viewable",   
-    // advertising: {
-    //   client: "vast",
-    //   schedule: {
-    //     tenSecondRoll: {
-    //       tag: "https://playertest.longtailvideo.com/vast-30s-ad.xml",
-    //       offset: 10
-    //     }
-    //   }
-    // }
+    autostart: "viewable"
 });
 
 played = false; 
@@ -44,73 +35,6 @@ function handlePlayingAd() {
 playerInstance.on('adComplete', function(e) {
     playerInstance.play();
 })
-
-// playerInstance.on('time', function(e) {
-//   console.log()
-//     if (e.position == cuePoint) {
-//       playerInstance.playAd("https://playertest.longtailvideo.com/vast-30s-ad.xml");
-//     }
-//   })
-
-// function 
-
-// playerInstance.onPlaylist(function(e){console.log(e.playlist[0].cuepoint)});
-
-// playerInstance.onPlaylist(function(e) {
-//     cuePoint = e.playlist[0].cuepoint;
-//     console.log(cuePoint);
-//     if (cuePoint) {
-//       playerInstance.on('time', function(e) {
-//         tenSec = e.duration;
-//         console.log(tenSec);
-//         if (tenSec == cuePoint) {
-//           console.log("It works!")
-//           playerInstance.playAd("https://playertest.longtailvideo.com/vast-30s-ad.xml");
-//         }
-//       });
-//     }
-  
-// });
-
-
-
-
-
-// playerInstance.on('time', function(e) {
-//   if (e.position == cuePoint) {
-//     playerInstance.playAd("https://playertest.longtailvideo.com/vast-30s-ad.xml");
-//   }
-// });
-
-
-
-// var object = playerInstance.getPlaylist();
-//     console.log(object);
-//     playerInstance.on('meta', function(e) {
-//       console.log(e);
-//     });
-
-
-
-// FUNCTIONS TO USE IF METADATA EXTRACTION WAS WORKING
-// playerInstance.on('meta', function(e) {
-//    var cuepoint = e.metadata.cuepoint;
-//    if (e.metadata) {
-//         playerInstance.on('time', function(e) {
-//           if (e.position == cuepoint) {
-//             playerInstance.playAd("https://playertest.longtailvideo.com/vast-30s-ad.xml");
-//           }
-// });
-
-// playerInstance.on('meta', function(e) {
-//  if (e.metadata) {
-//    var cuepoint = e.metadata.cuepoint;
-//  }
-// });
-//    console.log(cuepoint);
-//    playerInstance.on('cuepoint', playAd("https://playertest.longtailvideo.com/vast-30s-ad.xml"))
-
-
 
 </script>
 </html>
