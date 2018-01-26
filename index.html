@@ -18,6 +18,9 @@ playerInstance.setup({
     autostart: "viewable" 
 });
 
+var object = playerInstance.getPlaylist();
+console.log(object);
+
 played = false; 
 playerInstance.on('time', function(e) {
    if (e.position >= playerInstance.getPlaylistItem().cuepoint && !played) {
