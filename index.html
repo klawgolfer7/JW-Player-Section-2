@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-<script src="https://content.jwplatform.com/libraries/X1MbsDjO.js"></script>
+<script src="https://content.jwplatform.com/libraries/O8RyQor0.js"></script>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,8 +18,10 @@ playerInstance.setup({
     autostart: "viewable" 
 });
 
+// NEXT TWO LINES IS TEST TO SEE THAT CUSTOMER "CUEPOINT" PARAMETER WAS SENT THROUGH IN VID FILE
 var object = playerInstance.getPlaylist();
 console.log(object);
+
 
 played = false; 
 playerInstance.on('time', function(e) {
